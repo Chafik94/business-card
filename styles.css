@@ -1,0 +1,128 @@
+body {
+    margin: 20px;
+    /*
+    Challenge:
+    Find a web safe font you like, and add it 
+    to your card.
+    */
+    font-family: Times, serif, sans-serif;
+}
+
+
+
+.card {
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: #100f17;
+    color: #ffffff;
+    border-radius: 10px;
+    position: relative;
+    padding-block: 20px;  
+}        
+
+.card::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 15px;
+  background: linear-gradient(90deg, #ff9a00, #ff2d55);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+
+.image-cropper {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+    position: relative;
+    border-radius: 50%;
+    border-color: #ffffff;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.avatar {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width:100%;
+  object-position:center top;
+  object-fit: cover;
+  border-radius: 50%;
+
+ 
+}
+
+.image-cropper::after{
+  content:"";
+  position:absolute;
+  inset: -8px;
+  border-radius: 50%;
+
+  /* color of the ring (tweak as you like) */
+  background: conic-gradient(
+    from 225deg,
+    #ff9a00,
+    #ff2d55,
+    #ff9a00
+  );
+    /* donut effect (keep only border thickness) */
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 4px),
+    #000 0
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - 4px),
+    #000 0
+  );
+
+  /* keep only bottom half */
+  clip-path: inset(60% 0 0 0);
+}
+.right-text {
+text-align: left;
+margin: auto;
+}
+.right-text h4 {
+    margin: 15px;
+    font-size: 15px;
+}
+.left-text {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+.inside-left-text {
+    margin: 0;
+}
+
+/*
+Stretch goals:
+Find other ways you can personalize 
+the design of your business card, e.g.:
+- change the border(s)
+- add border radius
+- shuffle the layout
+- shadows        🤯
+- hover effects  🤯🤯
+- animations     🤯🤯🤯
+*/
+
+/*
+Final challenge:
+Download the code to your local computer and place it
+in a folder called "business-card"
+*/
+
